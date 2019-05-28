@@ -1,29 +1,27 @@
 # fetch-audio-from-fm
-从FM网站批量下载专辑的音频，并转换到MP3格式
+Forked from zhenze12345/fetch-audio-from-fm
+从FM网站批量下载专辑的音频，并可选择转换到MP3格式。
 
-现在支持的网站:
-------
-[喜马拉雅](http://www.ximalaya.com)  
-[蜻蜓FM](http://www.qingting.fm)  
-[荔枝FM](http://www.lizhi.fm)
+## 支持网站
+- [喜马拉雅](https://www.ximalaya.com)
+- [蜻蜓FM](https://www.qingting.fm)
+- [荔枝FM](https://www.lizhi.fm)
 
-注意:
-------
-除lizhi以外其他网站必须安装ffmpeg
+## 使用方法
+ruby [script] [url] [filter] --[extra_args]
 
-使用方法:
-------
-ruby ximalaya http://www.ximalaya.com/11129614/album/2872220  
-如果希望下载标题包含某个词(如:侯景传)的音频，可以使用:  
-ruby ximalaya http://www.ximalaya.com/11129614/album/2872220 侯景传  
-其他网站的下载方法都相同  
+以ximalaya为例，如果希望下载标题包含某个词(如:汾河湾)的音频，可以使用,
+ruby ximalaya https://www.ximalaya.com/xiangsheng/9723091 汾河湾
+如果希望转换为mp3,
+ruby ximalaya https://www.ximalaya.com/xiangsheng/9723091 汾河湾 --convert_to_mp3
 
-依赖:
-------
-https://github.com/YorickPeterse/oga  
-https://github.com/rdp/os  
-https://www.ffmpeg.org
+## 注意
+如需转换，除lizhi以外，其他网站必须安装ffmpeg
 
-Notes:
-------
-ximalaya是[https://github.com/zhenze12345/ximalaya](https://github.com/zhenze12345/ximalaya)的多线程版本
+## 依赖
+- https://github.com/YorickPeterse/oga
+- https://github.com/rdp/os
+- https://www.ffmpeg.org
+
+## Notes
+- ximalaya是[https://github.com/zhenze12345/ximalaya](https://github.com/zhenze12345/ximalaya)的多线程版本
